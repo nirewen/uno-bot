@@ -1,0 +1,21 @@
+**UNO!** é um jogo onde o objetivo é ficar sem nenhuma carta.
+
+Todos os jogadores começam com 7 cartas e no meio da mesa há uma **pilha de descartes**.
+Na sua vez, você deve descartar uma carta **da mesma cor** ou **número** da carta do topo da pilha.
+Se você não tiver nenhuma carta que se aplique, você compra da **pilha de compras**.
+
+Caso você receba uma carta curinga, as de fundo preto, ela pode ser jogada em cima de qualquer outra.
+Após jogada, a cor dela pode ser escolhida e então a próxima carta jogada deverá ser daquela cor.
+
+Algumas cartas possuem efeitos, como a +2, que faz o próximo jogador comprar mais 2 cartas e sua vez é pulada.
+A carta REVERSE que muda a direção da mesa (por exemplo, se estiver em sentido horário, fica anti-horário)
+A curinga +4, que faz o próximo jogador comprar 4 cartas, muda a cor do jogo e pula a vez dele.
+E também a carta SKIP, que só pula a vez do próximo jogador.
+
+Quando você tiver só 1 carta, você deve gritar **UNO!** para que todos saibam que essa é sua oportunidade de ganhar.
+Quando a última carta é jogada, o jogo acaba e os pontos são contados.
+
+Quando se está jogando com amigos, é comum adicionar algumas regras pro jogo ficar mais divertido.
+Como a regra do 7, que toda vez que um 7 é jogado, o jogador pode escolher trocar de mão com outro.
+Ou a do 0, que toda vez que jogam um 0, todos trocam de mão com o próximo.
+Alguns preferem que se não tiver uma carta, que continue comprando até que tenha, outros preferem que compre e se não tiver, pula a vez.
