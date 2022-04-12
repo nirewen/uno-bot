@@ -335,10 +335,12 @@ export class UNO extends Game {
 
         const embed = UNO.baseEmbed
             .setDescription(
-                `${user} jogou **${this.table.flipped}**.\n` +
-                    `${userPlayer.user} agora tem ${userPlayer.hand.length} cartas.\n` +
+                `${user} jogou **${this.table.flipped}**\n` +
+                    `e agora tem **${userPlayer.hand.length}** carta${s(
+                        userPlayer.hand.length
+                    )}.\n` +
                     `${extra}\n\n` +
-                    `Agora é a vez de ${this.player.user}!`
+                    `É a vez de ${this.player.user}!`
             )
             .setThumbnail('attachment://card.png')
             .setColor(this.table.flipped.colorCode)
@@ -352,7 +354,7 @@ export class UNO extends Game {
             .setDescription(
                 `${user} foi pulado porque demorou demais para jogar\n\n` +
                     `**${this.table.flipped}** foi jogada por último.\n\n` +
-                    `Agora é o turno de ${this.player.user}!`
+                    `É o turno de ${this.player.user}!`
             )
             .setThumbnail('attachment://card.png')
             .setColor(this.table.flipped.colorCode)
@@ -362,11 +364,16 @@ export class UNO extends Game {
     }
 
     getDrewCardMessage(user: User) {
+        const userPlayer = this.players.get(user.id)!
+
         const embed = UNO.baseEmbed
             .setDescription(
-                `${user} comprou uma carta.\n\n` +
+                `${user} comprou uma carta\n` +
+                    `e agora tem **${userPlayer.hand.length}** carta${s(
+                        userPlayer.hand.length
+                    )}.\n\n` +
                     `**${this.table.flipped}** foi jogada por último.\n\n` +
-                    `Agora é o turno de ${this.player.user}!`
+                    `É o turno de ${this.player.user}!`
             )
             .setThumbnail('attachment://card.png')
             .setColor(this.table.flipped.colorCode)
@@ -384,8 +391,8 @@ export class UNO extends Game {
         const embed = UNO.baseEmbed
             .setDescription(
                 `O jogo começou com ${this.queue.length} jogadores!\n` +
-                    `A carta à mesa é **${this.table.flipped}**.\n\n` +
-                    `Agora é o turno de ${this.player.user}!${extra}`
+                    `A carta na mesa é **${this.table.flipped}**.\n\n` +
+                    `É o turno de ${this.player.user}!${extra}`
             )
             .setThumbnail('attachment://card.png')
             .setColor(this.table.flipped.colorCode as ColorResolvable)

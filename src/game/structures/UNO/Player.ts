@@ -51,8 +51,8 @@ export class Player extends AbstractPlayer<UNO> {
 
         const embed = UNO.baseEmbed
             .setDescription(
-                `${turn ? 'É seu turno! ' : ''}\n` +
-                    `Ao lado está a carta à mesa\n\nAqui está sua mão:` +
+                `${turn ? 'É seu turno! ' : ''}Ao lado está a carta atual na mesa:\n` +
+                    `\nAqui está sua mão:\n` +
                     `${this.hand.map(h => `**${h}**`).join(' | ')}\n\n` +
                     `Você tem ${this.hand.length} carta${s(this.hand.length)}.`
             )
